@@ -149,7 +149,7 @@ export async function testEnvironment(
         args.push("--sandbox=none");
       }
       if (extraArgs.length > 0) args.push(...extraArgs);
-      args.push("Respond with hello.");
+      args.push("-p", "Respond with hello.");
 
       const probe = await runChildProcess(
         `gemini-envtest-${Date.now()}-${Math.random().toString(16).slice(2)}`,
