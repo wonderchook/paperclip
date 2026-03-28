@@ -318,9 +318,6 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
     args.push("--approval-mode", "yolo");
     if (sandbox) {
       args.push("--sandbox");
-    } else {
-      args.push("--sandbox=none");
-    }
     if (extraArgs.length > 0) args.push(...extraArgs);
     args.push("-p", prompt);
     return args;
